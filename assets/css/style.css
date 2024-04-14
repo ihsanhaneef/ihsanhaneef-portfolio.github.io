@@ -277,6 +277,7 @@ h6 {
   /* background: url("../img/hero-bg.jpg") top right no-repeat; */
   background-size: cover;
   position: relative;
+  
 }
 
 @media (min-width: 992px) {
