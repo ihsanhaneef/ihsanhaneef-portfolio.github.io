@@ -285,6 +285,15 @@ h6 {
     padding-left: 160px;
   }
 }
+@media screen and (max-width: 768px) {
+  #hero .cvv {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -250px; /* Adjust as needed */
+  }
+}
 
 #hero:before {
   content: "";
