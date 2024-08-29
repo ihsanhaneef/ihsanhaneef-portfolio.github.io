@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card with More Info</title>
+    <style>
+        /* Basic styling for the card */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 250px;
+            height: 350px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hidden content for more info */
+        .more-info {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .portfolio-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-img" style="background-image: url('assets/img/projects/projectinsight.jpg');"></div>
+        <div class="card-info">
+            <p class="text-title">Insight'24</p>
+            <p class="text-body">Product description adfkjakfkafAFLKDJLKajdlkjDSdksfsjfklasdgsagdnd details</p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <button class="card-button" onclick="toggleMoreInfo()">More info</button>
+        </div>
+    </div>
+</div>
+
+<!-- More Info Section -->
+<div class="more-info" id="moreInfo">
+    <main id="main">
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+                <div class="row gy-4">
+                    <h1><b>Insight'24</b></h1>
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/SCREENSHOT/INSIGHTSCREEN1.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/SCREENSHOT/INSIGHTSCREE2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/SCREENSHOT/INSIGHTSCREEN3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <ul>
+                                <li><strong>Project URL</strong>: <a href="#">https://insight.uoc.ac.in/</a></li>
+                                <li><strong>Category</strong>: Web design</li>
+                                <li><strong>Client</strong>: CCSIT CU CAMPUS</li>
+                                <li><strong>▶️ Bootstrap</strong></li>
+                                <li><strong>▶️ Node.Js</strong></li>
+                                <li><strong>▶️ MongoDB</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="portfolio-description">
+                        <h2>Insight'24</h2>
+                        <p>The INSIGHT'24 is a technocrat fest conducted by CCSIT, CU Campus. The insight is a prestigious fest that has been conducting for more than 20 years. It includes various games and events like technova, enigma, seminars, and workshops. It has various competitions like web designing, debugging, debate, presentations, LAN gaming, etc. Every season it creates new technocrats and new opportunities. The national IT fest has been riveted by many aspirants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+    function toggleMoreInfo() {
+        var moreInfoSection = document.getElementById('moreInfo');
+        if (moreInfoSection.style.display === 'none' || moreInfoSection.style.display === '') {
+            moreInfoSection.style.display = 'block';
+        } else {
+            moreInfoSection.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
